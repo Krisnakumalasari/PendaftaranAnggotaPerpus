@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        tools:context="id.sch.smktelkom_mlg.tugas01.xiirpl4019.pendaftarananggotaperpus.MainActivity">
+
+
+        <TextView
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:text="Form Pendaftaran Anggota Perpustakaan SMK Telkom Malang"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="262dp"
+            android:layout_marginStart="262dp"
+            android:src="@drawable/loog" />
+
+        <EditText
+            android:id="@+id/editTextNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView"
+            android:hint="Nama" />
+
+        <EditText
+            android:id="@+id/editTextTL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextNama"
+            android:ems="10"
+            android:hint="Tempat Lahir" />
+
+        <EditText
+            android:id="@+id/editTextTgl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextTL"
+            android:ems="10"
+            android:hint="Tanggal Lahir" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextTgl"
+            android:layout_marginTop="16dp"
+            android:text="Jenis Kelamin : "
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupJK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView3"
+            android:layout_marginLeft="37dp"
+            android:layout_marginStart="37dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonLK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Laki-laki" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Perempuan" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioGroupJK"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/radioGroupJK"
+                android:layout_marginTop="13dp"
+                android:text="Kelas:"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinnerKelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/kelas" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Buku yang Disukai:"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fiksi" />
+
+            <CheckBox
+                android:id="@+id/checkBoxNF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Non Fiksi" />
+
+            <CheckBox
+                android:id="@+id/checkBoxFI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fiksi Ilmiah" />
+
+            <CheckBox
+                android:id="@+id/checkBoxI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ilmiah" />
+
+            <Button
+                android:id="@+id/buttonOK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK" />
+
+            <TextView
+                android:id="@+id/textViewHasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Hasil" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
+
