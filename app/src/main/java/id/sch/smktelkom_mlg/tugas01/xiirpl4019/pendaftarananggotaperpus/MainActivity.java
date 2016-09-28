@@ -63,11 +63,20 @@ public class MainActivity extends AppCompatActivity {
                         findViewById(rgJK.getCheckedRadioButtonId());
                 hasil = rb.getText().toString();
             }
+            String buku = "menyukai buku: ";
+            int startlen = buku.length();
+            if (cbF.isChecked()) buku += cbF.getText() + ",";
+            if (cbNF.isChecked()) buku += cbNF.getText() + ",";
+            if (cbFI.isChecked()) buku += cbFI.getText() + ",";
+            if (cbI.isChecked()) buku += cbI.getText() + ",";
+
+            if (buku.length() == startlen) buku += "tidak memilih";
+
             if (hasil == null) {
                 tvHasil.setText("Anda Belum memilih Jenis Kelamin");
             } else {
                 tvHasil.setText("Anda yang bernama " + nama + "lahir di " + tl +
-                        "pada " + tgl + "yang berjenis kelamin " + hasil +
+                        "pada " + tgl + "yang berjenis kelamin " + hasil + "kelas " + spKelas.getSelectedItem().toString() + buku +
                         "telah mendaftar menjadi anggota perpustakaan SMK Telkom Malang");
             }
         }
